@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body onload="draw()">
+<canvas id="sketch" width="800" height="800">
+</canvas>
+<script>
+	function draw() {
+		var sketch = document.getElementById('sketch');
+		var context = sketch.getContext("2d");
+		var aaa = prompt("How many circles do you want in a row?")
+		var x = 20
+		for(var a = 1; a <= aaa; a = a + 1){
+			context.fillStyle = "#ff00f6"
+			context.beginPath();
+			context.arc(x, 50, 20, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+        var x = x + 50
+	}
+}	
+</script>
+</body>
+</html>
